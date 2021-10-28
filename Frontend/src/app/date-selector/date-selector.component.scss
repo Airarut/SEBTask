@@ -1,0 +1,25 @@
+.center-table{
+    border:1px solid black;
+    max-width:100%;
+    white-space:nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.column{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.center{
+    margin:auto;
+    text-align: center;
+}
+
+.margin-element{
+    margin: 10px;
+}

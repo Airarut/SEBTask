@@ -1,0 +1,23 @@
+<div class="margin-element">
+  <mat-form-field appearance="fill">
+    <mat-label >Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" (dateChange)="onSelect($event)" [formControl]="date" [min]="minDate" [max]="maxDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<h1>Base currency: {{this.exchangeRateDto?.baseCurrency}}</h1>
+<table class="center-table">
+  <tr>
+    <th class="column">Currency short code</th> 
+    <th class="column">Change of rate in %</th>
+    <th class="column">Selected day rate</th>
+    <th class="column">Previous day rate</th>
+  </tr>
+  <tr *ngFor="let p of this.exchangeRateDto?.currencyInformation">
+      <td class="column">{{p.currencyShortCode}}</td> 
+      <td class="column">{{p.changeOfRate}}%</td>
+      <td class="column">{{p.currentDateRate}}</td>
+      <td class="column">{{p.previousDateRate}}</td>
+  </tr>
+</table>
