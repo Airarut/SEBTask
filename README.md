@@ -1,8 +1,10 @@
 # SEBTask
 
-#Install npm packages
+# Install npm packages
+
 npm install
 
-#Run frontend application
+# Run frontend application
+
 ng serve
 
